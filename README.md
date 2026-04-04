@@ -1,5 +1,32 @@
 *This project has been created as part of the 42 curriculum by vabatist.*
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Description](#description)
+- [Instructions](#instructions)
+  - [1) Running the training and evaluation interface](#1-running-the-training-and-evaluation-interface)
+  - [1.1) Manual launch (fallback if run.sh fails)](#11-manual-launch-fallback-if-runsh-fails)
+  - [2) Exporting configurations](#2-exporting-configurations)
+  - [3) Submission requirements](#3-submission-requirements)
+  - [4) Evaluation interface](#4-evaluation-interface)
+- [Resources](#resources)
+  - [Networking concepts studied](#networking-concepts-studied)
+    - [- TCP (Transmission Control Protocol)](#--tcp-transmission-control-protocol)
+    - [- IP address](#--ip-address)
+    - [- Public vs. Private IP addresses](#--public-vs-private-ip-addresses)
+    - [- Subnet mask](#--subnet-mask)
+    - [- CIDR notation](#--cidr-notation)
+    - [- Subnetting table / reference](#--subnetting-table--reference)
+    - [- Default gateways](#--default-gateways)
+    - [- Switch](#--switch)
+    - [- Router](#--router)
+    - [- Routing table](#--routing-table)
+    - [- OSI model (7 layers)](#--osi-model-7-layers)
+  - [Classic reference](#classic-reference)
+  - [Useful links](#useful-links)
+  - [AI usage (what and where)](#ai-usage-what-and-where)
+
 ## Description
 **NetPractice** is a project that involves solving networking problems to make a network function properly.
 
@@ -7,7 +34,7 @@
 
 ## Instructions
 
-### 1) Running the training/evaluation interface
+### 1) Running the training and evaluation interface
 1. Download the file attached to the project’s page.
 2. Extract the files into any folder of your choice.
 3. From that directory, run:
@@ -44,11 +71,10 @@ configuration is incorrect, for example, if a **gateway** is missing or an **IP 
 For the final submission, **exactly 10 exported configuration files (one per level) must be placed at the root of this Git repository** (same level as this `README.md`).
 Only files inside your repository are evaluated.
 
-### 4) Evaluation
+### 4) Evaluation interface
 - In the **evaluation interface**, you will have to successfully complete three random levels, as mentioned on the training platform. You will have a limited amount of time to do so.
 - You are not allowed to use external tools during your evaluation.
-The use of a simple calculator such as bc is tolerated, but it will
-be the limit.
+The use of a simple calculator such as bc is tolerated, but it will be the limit.
 
 ## Resources
 
@@ -56,29 +82,39 @@ To complete this assignment, you have to understand how addressing works in a ne
 
 ### Networking concepts studied
 This project practices fundamental concepts, including:
-- **TCP (Transmission Control Protocol)** A reliable, connection-oriented transport protocol. TCP establishes a connection, segments data, uses acknowledgements/retransmissions, and delivers bytes in order to provide end‑to‑end reliability.
-- **IP address** A logical address used to identify a device and the network it belongs to. In IPv4, an address is split into a network part (which subnet) and a host part (which device inside that subnet).
-- **Public vs. Private IP addresses**
-  - Public IP: globally routable on the Internet (typically assigned by an ISP).
-  - Private IP: used inside local networks (RFC1918 ranges) and not routable on the public Internet; usually translated to a public IP through NAT.
-- **Subnet mask** A 32-bit value that indicates which bits of an IPv4 address represent the network and which represent the host. It defines the size of the subnet and which addresses are considered “local”.
-- **CIDR notation** A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after / is how many bits are in the network prefix.
-- **Subnetting table / reference** A quick lookup to map prefix lengths to:
+#### - TCP (Transmission Control Protocol)
+A reliable, connection-oriented transport protocol. TCP establishes a connection, breaks data into smaller packets and uses acknowledgements to provide end‑to‑end delivery without loss.
+#### - IP address
+Your device's logical address on a network. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device
+#### - Public vs. Private IP addresses
+  - Public IP: A globally routable address assigned by your internet service provider that lets you connect directly to the Internet
+  - Private IP: An internal address assigned by your router strictly for devices on the same local network to talk to each other. It is not routable on the public Internet, keeping your internal devices hidden
+#### - Subnet mask
+A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. It defines the size of the subnet and which addresses are considered “local”.
+#### - CIDR notation
+A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after / is how many bits are in the network prefix. So instead of writing out `255.255.255.0`, you just use a slash followed by the number of bits that serve as the network address, like `/24`.
+#### - Subnetting table / reference
+It gives you a quick lookup to map prefix lengths to:
     - Subnet mask (e.g., /27 → 255.255.255.224)
     - Number of usable hosts per subnet
     - Block size / address increment
-- **Default gateways**  The router IP a host sends traffic to when the destination is outside its local subnet (i.e., no more specific route matches).
-- **Switch** A Layer 2 device that connects hosts within the same LAN and forwards frames based on MAC addresses. It does not route between IP networks.
-- **Router** A Layer 3 device that connects different IP networks and forwards packets based on IP routes. Each router interface belongs to a specific subnet, and subnets must not overlap.
-- **Routing table** A list of routes used to decide where to forward packets. Each entry typically includes a destination network/prefix and a next hop (or outgoing interface). NetPractice often simplifies this to “destination network + next hop”.
-- **OSI model (7 layers)** A conceptual model that helps locate where protocols operate:
-1. Physical
-2. Data Link
-3. Network
-4. Transport
-5. Session
-6. Presentation
-7. Application
+#### - Default gateways
+The ultimate "way out" of your network. It is the next-hop router IP your device blindly tosses traffic to when the destination is outside the local subnet and it doesn't have a more specific route (`0.0.0.0/0`).
+#### - Switch
+A Layer 2 device that connects multiple hosts together within a single local network. It only distributes packets locally and cannot talk directly to an outside network.
+#### - Router
+A Layer 3 device that connects multiple different networks together. It has an interface for every network it touches, and the IP ranges on those interfaces absolutely must not overlap.
+#### - Routing table
+A data table stored in a router that lists the directions to particular network destinations. Each entry pairs a destination network with a "next hop" IP address, telling the packet exactly where to go next.
+#### - OSI model (7 layers)
+- OSI stands for **Open Systems Interconnect** Reference Model. It is an architectural model developed by the International Standards Organization (ISO) to describe the structure and functions of data communications protocols. By dividing network communications into seven distinct layers, it isolates functions so that new network applications or hardware can be added without having to rewrite the entire system. The layers are:
+    1. **Physical**: Defines the physical characteristics of the network media and hardware. *Examples: voltage levels, interface pins, RS232C and V.35 connectors, and IEEE 802.3 wiring standards*.
+    2. **Data Link**: Handles the reliable delivery of data across the underlying physical network link. *Examples: existing data link protocols over which IP transmits, such as Ethernet frames*.
+    3. **Network**: Manages connections across the network and handles the addressing, routing, and delivery of data. *Example: the Internet Protocol (IP)*.
+    4. **Transport**: Provides end-to-end error detection and correction, guaranteeing that the receiver gets the data exactly as it was sent. *Examples: Transmission Control Protocol (TCP) and User Datagram Protocol (UDP)*.
+    5. **Session**: Manages the sessions (connections) between cooperating applications. *Examples: In TCP/IP, this is handled using "sockets" and "ports" to describe the communication path*.
+    6. **Presentation**: Standardizes how data is represented and presented to the applications. *Examples: XDR and MIME protocols*.
+    7. **Application**: The top level where user-accessed network processes and application programs reside. *Examples: File Transfer Protocol (FTP), Hypertext Transfer Protocol (HTTP), Simple Mail Transfer Protocol (SMTP), and Telnet*.
 
 ### Classic reference
 - [TCP/IP Network Administration, Craig Hunt (3rd Edition)](https://www.oreilly.com/library/view/tcp-ip-network-administration/0596002971/) — *Used as a reliable reference to review core TCP/IP fundamentals (addressing, routing principles, and a troubleshooting mindset).*
