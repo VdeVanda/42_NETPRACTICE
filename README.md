@@ -130,3 +130,7 @@ AI tools were used **only for documentation support**, specifically to:
 - Reduce repetitive editing (formatting, section organization, wording).
 
 AI tools were **not** used to generate the exported configuration files; the network solutions were produced by completing the NetPractice levels and exporting the results from the training interface.
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+</br>
