@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <vabatist>.*
+*This project has been created as part of the 42 curriculum by vabatist.*
 
 ## Description
 NetPractice is a general practical exercise designed to introduce the basics of computer networking. The goal of the project is to configure small-scale virtual networks to make them function properly. To achieve this, it is necessary to understand how to configure IP addresses, connect devices through a router, and understand the role of a default gateway within a network.
