@@ -39,7 +39,7 @@ This project practices fundamental concepts, including:
 ### Classic references & links
 - Craig Hunt, *TCP/IP Network Administration* (3rd Edition)
 - [You Suck at Subnetting (YouTube series)](https://youtube.com/playlist?list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&si=mVq2UlD8b8q1WdmL)
-- Community training/mirror: https://github.com/lpaube/NetPractice
+- [Guide to NetPractice (github)](https://github.com/lpaube/NetPractice)
 
 ### AI usage (what and where)
 AI tools were used **only for documentation support**, specifically to:
