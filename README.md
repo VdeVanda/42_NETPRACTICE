@@ -1,32 +1,48 @@
 *This project has been created as part of the 42 curriculum by vabatist.*
 
 ## Description
-NetPractice is a general practical exercise designed to introduce the basics of computer networking. The goal of the project is to configure small-scale virtual networks to make them function properly. To achieve this, it is necessary to understand how to configure IP addresses, connect devices through a router, and understand the role of a default gateway within a network.
+**NetPractice** is a practical introduction to core computer networking concepts through a set of small, visual network scenarios.
+
+**Goal:** for each level, configure the provided network (IP addresses, subnet masks, routes/gateways, etc.) so that the required hosts can communicate according to the level’s objectives. The project focuses on understanding *why* a configuration works rather than memorizing values.
 
 ## Instructions
-**Running the Training Interface:**
-To run the training interface, extract the downloaded files into a folder and execute the `./run.sh` script in your terminal. This will launch a local web server and automatically open your preferred web browser to the NetPractice page. If the script does not function properly due to browser security constraints, you can manually run `python3 -m http.server 49242` and then navigate to `http://localhost:49242` in your web browser.
 
-**Exporting Configurations:**
-Before starting the exercises, make sure to enter your intranet login in the training interface to use your personal configuration. Once you have successfully completed a level and achieved the goals, use the **Get my config** button to export and save your configuration file.
+### 1) Running the training interface
+1. Download the NetPractice training files from the 42 intranet.
+2. Extract them into a directory of your choice.
+3. From that directory, run:
+   ```bash
+   ./run.sh
+   ```
+This starts a local web server and opens the training interface in your browser.
 
-**Submission Requirements:**
-For the final submission, exactly 10 exported configuration files (one per level) must be placed at the root of your Git repository. Only the work within your repository will be evaluated during the defense.
+### 2) Exporting configurations
+- In the training interface, enter your **42 intranet login** so the tool generates/export files tied to your user.
+- After completing a level and meeting all goals, **export** the configuration for that level.
+- Repeat for all required levels until you have exported **10 configuration files** (one per level).
+
+### 3) Submission requirements
+For the final submission, **exactly 10 exported configuration files (one per level) must be placed at the root of this Git repository** (same level as this `README.md`).  
+Only files inside your repository are evaluated.
 
 ## Resources
-**Networking Concepts Studied:**
-To successfully complete this project, core networking concepts were studied, including:
-* TCP/IP addressing
-* Subnet masks
-* Default gateways
-* Routers and switches
-* OSI layers
 
-**Classic References & Links:**
-* *TCP/IP Network Administration*, Third Edition, by Craig Hunt.
-* *You Suck at Subnetting* (YouTube).
-* https://github.com/lpaube/NetPractice
+### Networking concepts studied
+This project practices fundamental concepts, including:
+- TCP/IP addressing
+- Subnet masks (CIDR)
+- Default gateways
+- Routers and switches
+- OSI layers
 
-**AI Usage:**
-AI tools were used to assist in formatting and drafting this README.md file, helping to reduce repetitive and tedious tasks during the documentation process.
-Nota: Lembra-te de substituir <your_login_here> pelo teu login da
+### Classic references & links
+- Craig Hunt, *TCP/IP Network Administration* (3rd Edition)
+- “You Suck at Subnetting” (YouTube series): https://youtube.com/playlist?list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&si=mVq2UlD8b8q1WdmL
+- Community training/mirror: https://github.com/lpaube/NetPractice
+
+### AI usage (what and where)
+AI tools were used **only for documentation support**, specifically to:
+- Rewrite and structure this `README.md` in clear English.
+- Reduce repetitive editing (formatting, section organization, wording).
+
+AI tools were **not** used to generate the exported configuration files; the network solutions were produced by completing the NetPractice levels and exporting the results from the training interface.
