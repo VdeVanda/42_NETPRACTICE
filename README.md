@@ -19,9 +19,16 @@ This shell script will launch a local web server and automatically open your pre
 
 Due to technical design and security constraints on various web browsers, it is required to use a local web server to deliver NetPractice’s web pages.
 **If the “run.sh” script does not function properly, you can access the project manually:**
-- first run `python3 -m http.server 49242` (you may change the port number)
-- then in your web browser navigate to the URL `http://localhost:49242` (or any other
-port you may have chosen).
+- first run:
+   ```bash
+   python3 -m http.server 49242
+   ```
+(you may change the port number)
+- then in your web browser navigate to the URL:
+   ```bash
+   http://localhost:49242
+   ```
+ (or any other port you may have chosen).
 
 ### 2) Exporting configurations
 - In the training interface, enter your **42 intranet login** so the tool generates/export files tied to your user.
