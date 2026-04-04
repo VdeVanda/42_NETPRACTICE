@@ -1,28 +1,35 @@
 *This project has been created as part of the 42 curriculum by vabatist.*
 
 ## Description
-**NetPractice** is a practical introduction to core computer networking concepts through a set of small, visual network scenarios.
+**NetPractice** is a project that involves solving networking problems to make a network function properly.
 
-**Goal:** for each level, configure the provided network (IP addresses, subnet masks, routes/gateways, etc.) so that the required hosts can communicate according to the level’s objectives. The project focuses on understanding *why* a configuration works rather than memorizing values.
+**Goal:** The goal of the project is to configure the provided network (IP addresses, subnet masks, routes/gateways, etc.) so that the required hosts can communicate according to the level’s objectives. This repository includes the **10 exported configuration files** (one per level) at the repository root: `level1.json` through `level10.json`. The project focuses on understanding *why* a configuration works rather than memorizing values.
+
 
 ## Instructions
 
 ### 1) Running the training interface
-1. Download the NetPractice training files from the 42 intranet.
-2. Extract them into a directory of your choice.
+1. Download the file attached to the project’s page.
+2. Extract the files into any folder of your choice.
 3. From that directory, run:
    ```bash
    ./run.sh
    ```
-This starts a local web server and opens the training interface in your browser.
+This shell script will launch a local web server and automatically open your preferred web browser to the dedicated NetPractice page.
+
+Due to technical design and security constraints on various web browsers, it is required to use a local web server to deliver NetPractice’s web pages.
+**If the “run.sh” script does not function properly, you can access the project manually:**
+- first run `python3 -m http.server 49242` (you may change the port number)
+- then in your web browser navigate to the URL `http://localhost:49242` (or any other
+port you may have chosen).
 
 ### 2) Exporting configurations
 - In the training interface, enter your **42 intranet login** so the tool generates/export files tied to your user.
 - After completing a level and meeting all goals, **export** the configuration for that level.
-- Repeat for all required levels until you have exported **10 configuration files** (one per level).
+- Repeat for all required levels until you have exported **10 configuration files**.
 
 ### 3) Submission requirements
-For the final submission, **exactly 10 exported configuration files (one per level) must be placed at the root of this Git repository** (same level as this `README.md`).  
+For the final submission, **exactly 10 exported configuration files (one per level) must be placed at the root of this Git repository** (same level as this `README.md`).
 Only files inside your repository are evaluated.
 
 ## Resources
