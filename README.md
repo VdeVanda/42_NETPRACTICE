@@ -12,17 +12,17 @@
   - [4) Evaluation interface](#4-evaluation-interface)
 - [Resources](#resources)
   - [Networking concepts studied](#networking-concepts-studied)
-    - [- TCP (Transmission Control Protocol)](#--tcp-transmission-control-protocol)
-    - [- IP address](#--ip-address)
-    - [- Public vs. Private IP addresses](#--public-vs-private-ip-addresses)
-    - [- Subnet mask](#--subnet-mask)
-    - [- CIDR notation](#--cidr-notation)
-    - [- Subnetting table / reference](#--subnetting-table--reference)
-    - [- Default gateways](#--default-gateways)
-    - [- Switch](#--switch)
-    - [- Router](#--router)
-    - [- Routing table](#--routing-table)
-    - [- OSI model (7 layers)](#--osi-model-7-layers)
+  - [- TCP (Transmission Control Protocol)](#--tcp-transmission-control-protocol)
+  - [- IP address](#--ip-address)
+  - [- Public vs. Private IP addresses](#--public-vs-private-ip-addresses)
+  - [- Subnet mask](#--subnet-mask)
+  - [- CIDR notation](#--cidr-notation)
+  - [- Subnetting table / reference](#--subnetting-table--reference)
+  - [- Default gateways](#--default-gateways)
+  - [- Switch](#--switch)
+  - [- Router](#--router)
+  - [- Routing table](#--routing-table)
+  - [- OSI model (7 layers)](#--osi-model-7-layers)
   - [Classic reference](#classic-reference)
   - [Useful links](#useful-links)
   - [AI usage (what and where)](#ai-usage-what-and-where)
@@ -82,31 +82,31 @@ To complete this assignment, you have to understand how addressing works in a ne
 
 ### Networking concepts studied
 This project practices fundamental concepts, including:
-#### - TCP (Transmission Control Protocol)
+### - TCP (Transmission Control Protocol)
 A reliable, connection-oriented transport protocol. TCP establishes a connection, breaks data into smaller packets and uses acknowledgements to provide end‑to‑end delivery without loss.
-#### - IP address
+### - IP address
 Your device's logical address on a network. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device
-#### - Public vs. Private IP addresses
+### - Public vs. Private IP addresses
   - Public IP: A globally routable address assigned by your internet service provider that lets you connect directly to the Internet
   - Private IP: An internal address assigned by your router strictly for devices on the same local network to talk to each other. It is not routable on the public Internet, keeping your internal devices hidden
-#### - Subnet mask
+### - Subnet mask
 A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. It defines the size of the subnet and which addresses are considered “local”.
-#### - CIDR notation
+### - CIDR notation
 A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after / is how many bits are in the network prefix. So instead of writing out `255.255.255.0`, you just use a slash followed by the number of bits that serve as the network address, like `/24`.
-#### - Subnetting table / reference
+### - Subnetting table / reference
 It gives you a quick lookup to map prefix lengths to:
     - Subnet mask (e.g., /27 → 255.255.255.224)
     - Number of usable hosts per subnet
     - Block size / address increment
-#### - Default gateways
+### - Default gateways
 The ultimate "way out" of your network. It is the next-hop router IP your device blindly tosses traffic to when the destination is outside the local subnet and it doesn't have a more specific route (`0.0.0.0/0`).
-#### - Switch
+### - Switch
 A Layer 2 device that connects multiple hosts together within a single local network. It only distributes packets locally and cannot talk directly to an outside network.
-#### - Router
+### - Router
 A Layer 3 device that connects multiple different networks together. It has an interface for every network it touches, and the IP ranges on those interfaces absolutely must not overlap.
-#### - Routing table
+### - Routing table
 A data table stored in a router that lists the directions to particular network destinations. Each entry pairs a destination network with a "next hop" IP address, telling the packet exactly where to go next.
-#### - OSI model (7 layers)
+### - OSI model (7 layers)
 - OSI stands for **Open Systems Interconnect** Reference Model. It is an architectural model developed by the International Standards Organization (ISO) to describe the structure and functions of data communications protocols. By dividing network communications into seven distinct layers, it isolates functions so that new network applications or hardware can be added without having to rewrite the entire system. The layers are:
     1. **Physical**: Defines the physical characteristics of the network media and hardware. *Examples: voltage levels, interface pins, RS232C and V.35 connectors, and IEEE 802.3 wiring standards*.
     2. **Data Link**: Handles the reliable delivery of data across the underlying physical network link. *Examples: existing data link protocols over which IP transmits, such as Ethernet frames*.
