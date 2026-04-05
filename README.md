@@ -15,6 +15,8 @@
   - [Useful links](#useful-links)
   - [AI usage (what and where)](#ai-usage-what-and-where)
 
+<div id="description"></div>
+
 ## Description
 **NetPractice** is a project that involves solving networking problems to make a network function properly.
 
@@ -67,6 +69,7 @@ The use of a simple calculator such as bc is tolerated, but it will be the limit
 ## Resources
 
 To complete this assignment, you have to understand how addressing works in a network that includes devices such as routers and switches. Read about TCP/IP addressing to strengthen your understanding of these concepts.
+
 <div id="top"></div>
 
 ### Networking concepts
@@ -220,6 +223,6 @@ AI tools were used **only for documentation support**, specifically to:
 
 AI tools were **not** used to generate the exported configuration files; the network solutions were produced by completing the NetPractice levels and exporting the results from the training interface.
 <div align="right">
-  <b><a href="#top">↥ back to top</a></b>
+  <b><a href="#description">↥ back to top</a></b>
 </div>
 </br>
