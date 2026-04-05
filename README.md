@@ -1,4 +1,4 @@
-<div id="description"></div>
+<div id="top"></div>
 
 *This project has been created as part of the 42 curriculum by vabatist.*
 
@@ -70,9 +70,6 @@ The use of a simple calculator such as bc is tolerated, but it will be the limit
 
 To complete this assignment, you have to understand how addressing works in a network that includes devices such as routers and switches. Read about TCP/IP addressing to strengthen your understanding of these concepts.
 
-
-<div id="top"></div>
-
 ### Networking concepts
 This project practices fundamental concepts, including:
 
@@ -81,20 +78,12 @@ This project practices fundamental concepts, including:
 
   A reliable, connection-oriented transport protocol. TCP establishes a connection, breaks data into smaller packets, uses acknowledgements/retransmissions, and delivers bytes in order to provide end‑to‑end delivery without loss.
 
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
-
 </details>
 
 <details>
   <summary><b>IP address</b></summary>
 
   Your device’s logical address on a network. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device.
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -104,20 +93,12 @@ This project practices fundamental concepts, including:
   - **Public IP**: A globally routable address assigned by your Internet Service Provider (ISP) that lets you connect directly to the Internet.
   - **Private IP**: An internal address used only inside your local network. It is not routable on the public Internet (often used together with NAT).
 
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
-
 </details>
 
 <details>
   <summary><b>Subnet mask</b></summary>
 
   A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. It defines the size of the subnet and which addresses are considered “local”.
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -126,10 +107,6 @@ This project practices fundamental concepts, including:
 
   A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after `/` is how many bits are in the network prefix.  
   Example: instead of writing `255.255.255.0`, you can write `/24`.
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -141,20 +118,12 @@ This project practices fundamental concepts, including:
   - number of usable hosts per subnet
   - block size / address increment
 
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
-
 </details>
 
 <details>
   <summary><b>Default gateway</b></summary>
 
   The “way out” of your network. It is the next-hop router IP your device sends traffic to when the destination is outside the local subnet (when no more specific route matches, i.e., the default route).
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -163,10 +132,6 @@ This project practices fundamental concepts, including:
 
   A Layer 2 device that connects multiple hosts together within a single local network. It forwards traffic locally (based on MAC addresses) and does not route between IP networks.
 
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
-
 </details>
 
 <details>
@@ -174,20 +139,12 @@ This project practices fundamental concepts, including:
 
   A Layer 3 device that connects multiple different networks together. It has an interface for every network it touches, and the IP ranges on those interfaces must not overlap.
 
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></a></b>
-  </div>
-
 </details>
 
 <details>
   <summary><b>Routing table</b></summary>
 
   A data table stored in a router that lists the directions to particular network destinations. Each entry pairs a destination network/prefix with a “next hop” IP address (or an outgoing interface), telling packets where to go next.
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -202,10 +159,6 @@ This project practices fundamental concepts, including:
   5. **Session**
   6. **Presentation**
   7. **Application**
-
-  <div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-  </div>
 
 </details>
 
@@ -224,6 +177,6 @@ AI tools were used **only for documentation support**, specifically to:
 
 AI tools were **not** used to generate the exported configuration files; the network solutions were produced by completing the NetPractice levels and exporting the results from the training interface.
 <div align="right">
-  <b><a href="#description">↥ back to top</a></b>
+  <b><a href="#top">↥ back to top</a></b>
 </div>
 </br>
