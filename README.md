@@ -67,10 +67,11 @@ The use of a simple calculator such as bc is tolerated, but it will be the limit
 ## Resources
 
 To complete this assignment, you have to understand how addressing works in a network that includes devices such as routers and switches. Read about TCP/IP addressing to strengthen your understanding of these concepts.
+<div id="top"></div>
 
 ### Networking concepts
 This project practices fundamental concepts, including:
-<div id="top"></div>
+
 <details>
   <summary><b>TCP (Transmission Control Protocol)</b></summary>
 
