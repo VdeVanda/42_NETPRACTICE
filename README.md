@@ -1,3 +1,4 @@
+<div id="description"></div>
 *This project has been created as part of the 42 curriculum by vabatist.*
 
 ## Table of Contents
@@ -14,8 +15,6 @@
   - [Classic reference](#classic-reference)
   - [Useful links](#useful-links)
   - [AI usage (what and where)](#ai-usage-what-and-where)
-
-<div id="description"></div>
 
 ## Description
 **NetPractice** is a project that involves solving networking problems to make a network function properly.
