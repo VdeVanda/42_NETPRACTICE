@@ -1,6 +1,6 @@
-<div id="top"></div>
-
 *This project has been created as part of the 42 curriculum by vabatist.*
+
+<div id="top"></div>
 
 ## Table of Contents
 
