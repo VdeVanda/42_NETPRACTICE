@@ -81,7 +81,7 @@ This project practices fundamental concepts, including:
 </details>
 
 <details>
-  <summary><b>IP address</b></summary>
+  <summary><b>IP (Internet Protocol) address</b></summary>
 
   Your device’s logical address on a network. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device.
 
@@ -103,7 +103,7 @@ This project practices fundamental concepts, including:
 </details>
 
 <details>
-  <summary><b>CIDR notation</b></summary>
+  <summary><b>CIDR (Classless Inter-Domain Routing) notation</b></summary>
 
   A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after `/` is how many bits are in the network prefix.  
   Example: instead of writing `255.255.255.0`, you can write `/24`.
