@@ -85,22 +85,22 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>TCP (Transmission Control Protocol)</b></summary>
 
-  A reliable, connection-oriented transport protocol. TCP establishes a connection, breaks data into smaller packets, uses acknowledgements/retransmissions, and delivers bytes in order to provide end‑to‑end delivery without loss.
+  TCP it's a communications standard that enables application programs and devices to exchange messages over a network, **used to send packets across the internet**. TCP **guarantees the integrity of the data being communicated over a network by establishing a connection between a source and its destination**, which remains active until communication begins. It **breaks large amounts of data into smaller packets** while ensuring end-to-end delivery without loss of any data, using acknowledgements and retransmissions to deliver bytes in order.
 
 </details>
 
 <details>
   <summary><b>IP (Internet Protocol) address</b></summary>
 
-  Your device’s logical address on a network, kind of like a phone number for computers and routers. It is composed of 4 sets of numbers (octets) separated by dots. Most private IPs use ranges like `192.168.1.x`. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device. Without IP addresses, devices would not be able to communicate with each other or connect to the Internet.
+  Your **device’s logical address on a network**, kind of like a phone number for computers and routers. It is composed of **4 sets of numbers (octets) separated by dots**. Most private IPs use ranges like `192.168.1.x`. It is split into **two parts:** one part identifies **the network you belong to**, and the other part identifies **your specific host device**. Without IP addresses, devices **would not be able to communicate with each other or connect to the Internet.**
 
 </details>
 
 <details>
   <summary><b>Public vs. Private IP addresses</b></summary>
 
-  - **Public IP**: A globally routable address assigned by your Internet Service Provider (ISP) that lets you connect directly to the Internet.
-  - **Private IP**: An internal address used only inside your local network. It is not routable on the public Internet (often used together with NAT).
+  - **Public IP**: A globally routable address assigned by your Internet Service Provider (ISP) that lets you **connect directly to the Internet.**
+  - **Private IP**: An internal address **used only inside your local network**. It is not routable on the public Internet (often used together with NAT).
 
 </details>
 
@@ -128,6 +128,18 @@ This project practices fundamental concepts, including:
   - subnet mask (e.g., `/27` → `255.255.255.224`)
   - number of usable hosts per subnet
   - block size / address increment
+
+  #### Class C Subnet Masks Reference Table
+
+  | Network Bits | Subnet Mask | Number of Subnets | Number of Hosts |
+  | :--- | :--- | :--- | :--- |
+  | /24 | 255.255.255.0 | 0 | 254 |
+  | /25 | 255.255.255.128 | 2 (0) | 126 |
+  | /26 | 255.255.255.192 | 4 (2) | 62 |
+  | /27 | 255.255.255.224 | 8 (6) | 30 |
+  | /28 | 255.255.255.240 | 16 (14) | 14 |
+  | /29 | 255.255.255.248 | 32 (30) | 6 |
+  | /30 | 255.255.255.252 | 64 (62) | 2 |
 
 </details>
 
