@@ -113,9 +113,62 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>Subnet mask</b></summary>
 
-  A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. For example, `255.255.255.0` is the same as `/24`: the `255` octets mean those IP bits stay the same inside the subnet, and the `0` octet means that part can vary for the hosts.
+  A **subnet mask** is a 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. For example, `255.255.255.0`: the `255` octets mean those IP bits stay the same inside the subnet, and the `0` octets mean that part can vary for the hosts. The usable host addresses in the varying section typically go from `1` to `254`; `0` is reserved for the network address (which identifies the subnet itself), and `255` is reserved for the broadcast address (which sends a message to every device in that subnet).
 
-  In a `/24` network, the last octet usually goes from `1` to `254` for devices. `0` is reserved for the network address, which identifies the subnet itself, and `255` is reserved for the broadcast address, which sends a message to every device in that subnet.
+  **Understanding bit values**
+
+  Each bit position in a binary number represents a power of 2. This is crucial to understanding subnet ranges. For example, in an octet (8 bits), each bit has a decimal value:
+
+  ```
+  Bit position: 7    6    5    4    3    2    1    0
+  Power of 2:   2^7  2^6  2^5  2^4  2^3  2^2  2^1  2^0
+  Decimal:      128  64   32   16   8    4    2    1
+  ```
+
+  When a mask has `0` bits available for hosts, you can represent values from `0` to the sum of those bit values. For instance, if you have 7 bits for hosts (when the last bit of the mask is `1`), you can represent: `2^7 = 128` possible values (0–127). If you have 8 bits for hosts (when all bits are `0`), you can represent: `2^8 = 256` possible values (0–255).
+
+  **Finding the network address**
+
+  To determine which portion of the IP address is the network address, we need to apply the mask to the IP address using a bitwise AND operation. For example, with IP address `192.168.1.130` and mask `255.255.255.128`:
+
+  Convert the mask to binary:
+  ```
+  Mask | 255.255.255.128
+       | 11111111.11111111.11111111.10000000
+  ```
+
+  The bits that are `1` represent the network address, while the bits that are `0` represent the host address. Now convert the IP to binary:
+
+  ```
+  IP address | 192.168.1.130
+             | 11000000.10101000.00000001.10000010
+  Mask       | 11111111.11111111.11111111.10000000
+  ```
+
+  Apply the mask through bitwise AND to find the network address:
+
+  ```
+  Network address | 11000000.10101000.00000001.10000000
+                  | 192.168.1.128
+  ```
+
+  **Finding the range of host addresses**
+
+  The bits dedicated to the host address (the `0` bits in the mask) determine the possible host range. In this example, the last 7 bits are available for hosts:
+
+  ```
+  BINARY  | 0000000 - 1111111
+  DECIMAL | 0 - 127
+  ```
+
+  The possible IP range is the network address plus the host range: `192.168.1.128` to `192.168.1.255`.
+
+  However, the extremities are reserved:
+  - `192.168.1.128` is reserved for the **network address** (identifies the subnet itself)
+  - `192.168.1.255` is reserved for the **broadcast address** (sends packets to all hosts in the network)
+
+  Therefore, the usable IP range is `192.168.1.129` to `192.168.1.254`.
+
 
 </details>
 
