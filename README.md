@@ -173,7 +173,7 @@ This project practices fundamental concepts, including:
 </details>
 
 <details>
-  <summary><b>CIDR (Classless Inter-Domain Routing) notation</b></summary>
+  <summary><b>CIDR (Classless Inter-Domain Routing) notation (/24)</b></summary>
 
   A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after `/` is how many bits are in the network prefix.  
   Example: instead of writing `255.255.255.0`, you can write `/24`.
@@ -239,7 +239,7 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>Switch</b></summary>
 
-  A Layer 2 device that connects multiple hosts together within a single local network. It forwards traffic locally (based on MAC addresses) and does not route between IP networks.
+  A Layer 2 device that connects multiple hosts/devices together in a single local network. Unlike a router, the switch does not have any interfaces since it only distributes packets to its local network, and cannot talk directly to a network outside of its own.
 
 </details>
 
@@ -254,6 +254,10 @@ This project practices fundamental concepts, including:
   <summary><b>Routing table</b></summary>
 
   A data table stored in a router that lists the directions to particular network destinations. Each entry pairs a destination network/prefix with a “next hop” IP address (or an outgoing interface), telling packets where to go next.
+
+  In NetPractice, the routing table consists of 2 elements:
+  - **Destination:** The destination specifies a network address on which a host is the end target of the packets. The route of default or 0.0.0.0/0, is the route that takes effect when no other route is available for an IP destination address. The default route will use the next-hop address to send the packets on their way without giving a specific destination. The default route will match any network
+  -**Next hop:** The next hop refers to the next closest router a packet can go through. It is the IP address of the next router on the packet's way. Every single router maintains its routing table with a next hop address.
 
 </details>
 
