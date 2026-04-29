@@ -178,6 +178,35 @@ This project practices fundamental concepts, including:
   A compact way to write a subnet mask using a prefix length (e.g., `/24`, `/30`). The number after `/` is how many bits are in the network prefix.  
   Example: instead of writing `255.255.255.0`, you can write `/24`.
 
+  **CIDR visual reference**
+
+  The prefix length is the number of `1` bits in the mask:
+
+  ```text
+  /24  11111111.11111111.11111111.00000000
+        8 bits . 16 bits. 24 bits.      =  25 bits       
+
+  /25  11111111.11111111.11111111.10000000
+        8 bits . 16 bits. 24 bits.   +1 =  25 bits
+
+  /26  11111111.11111111.11111111.11000000
+        8 bits . 16 bits. 24 bits.   +2 =  26 bits
+
+  /27  11111111.11111111.11111111.11100000
+        8 bits . 16 bits. 24 bits.   +3 =  27 bits
+
+  /28  11111111.11111111.11111111.11110000
+        8 bits . 16 bits. 24 bits.   +4 =  28 bits
+
+  /29  11111111.11111111.11111111.11111000
+        8 bits . 16 bits. 24 bits.   +5 =  29 bits
+
+  /30  11111111.11111111.11111111.11111100
+        8 bits . 16 bits. 24 bits.   +6 =  30 bits
+  ```
+
+  In other words, `/24` means the first 24 bits are part of the network prefix, and the remaining bits are available for host addresses.
+
 </details>
 
 <details>
