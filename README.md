@@ -92,7 +92,7 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>IP (Internet Protocol) address</b></summary>
 
-  Your device’s logical address on a network, kind of like a phone number for computers and routers. It is composed of 4 sets of numbers (octets) separated by dots. Most private IPs start with `192.168.1.  `. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device. Without IP addresses, devices would not be able to communicate with each other or connect to the Internet.
+  Your device’s logical address on a network, kind of like a phone number for computers and routers. It is composed of 4 sets of numbers (octets) separated by dots. Most private IPs use ranges like `192.168.1.x`. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device. Without IP addresses, devices would not be able to communicate with each other or connect to the Internet.
 
 </details>
 
@@ -107,7 +107,9 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>Subnet mask</b></summary>
 
-  A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. It defines the size of the subnet and which addresses are considered “local”.
+  A 32-bit value (4 bytes) that indicates which bits of your IP address represent the network and which represent the host. For example, `255.255.255.0` is the same as `/24`: the `255` octets mean those IP bits stay the same inside the subnet, and the `0` octet means that part can vary for the hosts.
+
+  In a `/24` network, the last octet usually goes from `1` to `254` for devices. `0` is reserved for the network address, which identifies the subnet itself, and `255` is reserved for the broadcast address, which sends a message to every device in that subnet.
 
 </details>
 
@@ -130,6 +132,31 @@ This project practices fundamental concepts, including:
 </details>
 
 <details>
+  <summary><b>IPv4 address classes and reserved ranges</b></summary>
+
+  IPv4 classful addressing is a historical reference, but it is still useful for understanding common ranges:
+  - **Class A**: `1.0.0.0` to `126.255.255.255` — Designed for very large networks with millions of hosts (host-heavy networks). Many Class A addresses were assigned to large corporations early on; for example:
+    - General Electric: `3.0.0.0` to `3.255.255.255`
+    - IBM: `9.0.0.0` to `9.255.255.255`
+    - Xerox: `13.0.0.0` to `13.255.255.255`
+    - Hewlett-Packard: `15.0.0.0` to `15.255.255.255`
+  - **Class B**: `128.0.0.0` to `191.255.255.255`
+  - **Class C**: `192.0.0.0` to `223.255.255.255`
+  - **Class D**: `224.0.0.0` to `239.255.255.255` (multicast)
+  - **Class E**: `240.0.0.0` to `255.255.255.255` (experimental/reserved)
+
+  Reserved address ranges for private use:
+  - `10.0.0.0` to `10.255.255.255`
+  - `172.16.0.0` to `172.31.255.255`
+  - `192.168.0.0` to `192.168.255.255`
+
+  Other reserved ranges:
+  - `127.0.0.0` to `127.255.255.255` is reserved for loopback and local host communication. Loopback addresses are virtual IPs that allow a computer to send traffic to itself, useful for testing whether the local network stack is working. You can use `ping 127.0.0.1` (also called "localhost") to verify that your own machine's networking is functioning correctly.
+  - `224.0.0.0` to `239.255.255.255` is reserved for multicast addresses.
+
+</details>
+
+<details>
   <summary><b>Default gateway</b></summary>
 
   The “way out” of your network. It is the next-hop router IP your device sends traffic to when the destination is outside the local subnet (when no more specific route matches, i.e., the default route).
@@ -146,7 +173,7 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>Router</b></summary>
 
-  A Layer 3 device that connects multiple different networks together. It has an interface for every network it touches, and the IP ranges on those interfaces must not overlap.
+  A Layer 3 device that connects multiple different networks together. On a local network, the router is often the default gateway for the devices connected to that subnet. It has an interface for every network it touches, and the IP ranges on those interfaces must not overlap.
 
 </details>
 
