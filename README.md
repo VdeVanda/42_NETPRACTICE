@@ -146,6 +146,8 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>IPv4 address classes and reserved ranges</b></summary>
 
+  Internet Protocol version 4 (IPv4) defines an IP address as a **32-bit number**. However, because of the growth of the Internet and the depletion of available IPv4 addresses, a new version of IP (IPv6), using **128 bits for the IP address**, was standardized in 1998. However, **only IPv4 addresses are used in NetPractice**.
+
   IPv4 classful addressing is a historical reference, but it is still useful for understanding common ranges:
   - **Class A**: `1.0.0.0` to `126.255.255.255` — Designed for very large networks with millions of hosts (host-heavy networks). Many Class A addresses were assigned to large corporations early on; for example:
     - General Electric: `3.0.0.0` to `3.255.255.255`
