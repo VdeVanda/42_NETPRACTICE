@@ -34,7 +34,7 @@
 ## Instructions
 
 ### 1) Running the training and evaluation interface
-1. Download the file attached to the project’s page.
+1. Download the file `net_practice.1.9.tgz` attached to the project’s page.
 2. Extract the files into any folder of your choice.
 3. From that directory, run:
    ```bash
