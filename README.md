@@ -92,7 +92,7 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>IP (Internet Protocol) address</b></summary>
 
-  Your device’s logical address on a network. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device.
+  Your device’s logical address on a network, kind of like a phone number for computers and routers. It is composed of 4 sets of numbers (octets) separated by dots. Most private IPs start with `192.168.1.  `. It is split into two parts: one part identifies the network you belong to, and the other part identifies your specific host device. Without IP addresses, devices would not be able to communicate with each other or connect to the Internet.
 
 </details>
 
