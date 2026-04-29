@@ -99,8 +99,14 @@ This project practices fundamental concepts, including:
 <details>
   <summary><b>Public vs. Private IP addresses</b></summary>
 
-  - **Public IP**: A globally routable address assigned by your Internet Service Provider (ISP) that lets you **connect directly to the Internet.**
-  - **Private IP**: An internal address **used only inside your local network**. It is not routable on the public Internet (often used together with NAT).
+  - A **public IP address** can be accessed directly over the Internet and is usually assigned to your network router by your Internet Service Provider (ISP). It helps you connect from inside your network to outside your network.
+
+  - A **private IP address** is assigned by your router to a device inside your local network. Each device within the same network gets a unique private IP address, which is how devices on the same internal network talk to each other.
+
+  When a network is connected to the Internet, it cannot use an IP address from the reserved private IP ranges:
+  - `192.168.0.0` to `192.168.255.255`
+  - `172.16.0.0` to `172.31.255.255`
+  - `10.0.0.0` to `10.255.255.255`
 
 </details>
 
