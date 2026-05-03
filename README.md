@@ -169,7 +169,46 @@ This project practices fundamental concepts, including:
 
   Therefore, the usable IP range is `192.168.1.129` to `192.168.1.254`.
 
+  Also, the **last network bit** tell us the increment of the network:
 
+  ```
+   Mask   | 255.255.255.128
+          | 11111111.11111111.11111111.10000000
+          | 10000000
+  Decimal | (128)  64   32   16   8    4    2    1
+   
+  ```
+  **Conclusion**
+
+  To break a network you must:
+
+  - 1. Calculate how many host bits you need to hack:
+  *For 16 networks (8 hosts each), you need to hack 4 host bits.*
+  ```
+  Decimal | 128  64   32   16   8    4    2    1
+   x2     | 256  128  64   32   16   8    4    2
+  Bits    |  8    7    6    5    4   3    2    1
+   
+  ```
+
+  - 2. Hack the host bits:
+  ```
+  Mask   | 255.255.255.240
+         | 11111111.11111111.11111111.11110000   
+  ```
+  - 3. Find the increment:
+  ```
+         | 11110000
+  Decimal| 128  64   32   (16)   8    4    2    1
+  ```
+  - 4. Create your network:
+  ```
+  192.168.1.0 - 192.168.1.15
+  192.168.1.16 - 192.168.1.31
+  192.168.1.32 - 192.168.1.67
+  192.168.1.68 - 192.168.1....
+  ```
+  
 </details>
 
 <details>
