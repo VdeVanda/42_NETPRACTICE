@@ -174,7 +174,7 @@ This project practices fundamental concepts, including:
   ```
    Mask   | 255.255.255.128
           | 11111111.11111111.11111111.10000000
-          | 10000000
+          |   1     0    0    0   0    0    0    0
   Decimal | (128)  64   32   16   8    4    2    1
    
   ```
